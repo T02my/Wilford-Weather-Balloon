@@ -3,7 +3,7 @@
 <head>
 	<title>Wilford</title>
 	<link rel='stylesheet' type='text/css' href='./css/style.css'>
-	<meta name="viewport" content="width=device-width; initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head> 
 <body>
   <div class="container">
@@ -94,6 +94,7 @@
 	  			</div>
 	  		</div>
 	  		<nav class="line-2__menu">
+	  			<p class="line-2__contact-msg">Contact</p>
 	  			<ul class="line-2__navbar white-text">
 	  				<li><a href="">Settings</a></li>
 	  				<li><a href="">Link</a></li>
@@ -136,7 +137,10 @@
   			<div class="line-3__status">
   				<div class="status__temperature">
   					<p class="status__title">Temperature</p>
-  					<p class="status__value">-120 <span class="normal-text">°с</span></p>
+  					<p class="status__value">
+              <span class="temperature-js">-120</span> 
+              <span class="normal-text">°с</span>
+            </p>
   				</div>
   				<div class="status__altitude">
   					<p class="status__title">Altitude</p>
@@ -174,47 +178,41 @@
   			<div class="line-4__balloon-device">
   				<div class="balloon-device">
   					<p class="balloon-device__text white-text">00343-A</p>
-  					<div class="balloon-device__emptysquare"></div>
   					<div class="balloon-device__smallbox">
   						<div class="smallbox__doublebox"></div>
   						<div class="smallbox__doublebox"></div>
   					</div>
   				</div>
   				<div class="balloon-device">
-  					<p class="balloon-device__text white-text">00343-A</p>
-  					<div class="balloon-device__emptysquare"></div>
+  					<p class="balloon-device__text white-text">00366-A</p>
   					<div class="balloon-device__smallbox">
   						<div class="smallbox__doublebox"></div>
   						<div class="smallbox__doublebox"></div>
   					</div>
   				</div>
   				<div class="balloon-device">
-  					<p class="balloon-device__text white-text">00343-A</p>
-  					<div class="balloon-device__emptysquare"></div>
+  					<p class="balloon-device__text white-text active">00352-A</p>
   					<div class="balloon-device__smallbox">
   						<div class="smallbox__doublebox"></div>
   						<div class="smallbox__doublebox"></div>
   					</div>
   				</div>
   				<div class="balloon-device">
-  					<p class="balloon-device__text white-text">00343-A</p>
-  					<div class="balloon-device__emptysquare"></div>
+  					<p class="balloon-device__text white-text">00375-A</p>
   					<div class="balloon-device__smallbox">
   						<div class="smallbox__doublebox"></div>
   						<div class="smallbox__doublebox"></div>
   					</div>
   				</div>
   				<div class="balloon-device">
-  					<p class="balloon-device__text white-text">00343-A</p>
-  					<div class="balloon-device__emptysquare"></div>
+  					<p class="balloon-device__text white-text">00312-A</p>
   					<div class="balloon-device__smallbox">
   						<div class="smallbox__doublebox"></div>
   						<div class="smallbox__doublebox"></div>
   					</div>
   				</div>
   				<div class="balloon-device">
-  					<p class="balloon-device__text white-text">00343-A</p>
-  					<div class="balloon-device__emptysquare"></div>
+  					<p class="balloon-device__text white-text">00362-A</p>
   					<div class="balloon-device__smallbox">
   						<div class="smallbox__doublebox"></div>
   						<div class="smallbox__doublebox"></div>
@@ -228,17 +226,17 @@
     				</div>
     				<div class="configure__progressbar">
               <p class="progressbar__status">Signal-A</p>
-              <p class="progressbar_bar active-pb"></p>
-              <p class="progressbar_bar active-pb"></p>
-              <p class="progressbar_bar active-pb"></p>
-              <p class="progressbar_bar active-pb"></p>
-              <p class="progressbar_bar active-pb"></p>
-              <p class="progressbar_bar active-pb"></p>
-              <p class="progressbar_bar active-pb"></p>
-              <p class="progressbar_bar active-pb"></p>
-              <p class="progressbar_bar active-pb"></p>
-              <p class="progressbar_bar active-pb"></p>
-              <p class="progressbar_bar active-pb"></p>
+              <p class="progressbar_bar active"></p>
+              <p class="progressbar_bar active"></p>
+              <p class="progressbar_bar active"></p>
+              <p class="progressbar_bar active"></p>
+              <p class="progressbar_bar active"></p>
+              <p class="progressbar_bar active"></p>
+              <p class="progressbar_bar active"></p>
+              <p class="progressbar_bar active"></p>
+              <p class="progressbar_bar active"></p>
+              <p class="progressbar_bar active"></p>
+              <p class="progressbar_bar active"></p>
               <p class="progressbar_bar"></p>
               <p class="progressbar_bar"></p>
               <p class="progressbar_bar"></p>
@@ -247,14 +245,14 @@
     				</div>
     				<div class="configure__progressbar">
                <p class="progressbar__status">Signal-B</p>
-              <p class="progressbar_bar active-pb"></p>
-              <p class="progressbar_bar active-pb"></p>
-              <p class="progressbar_bar active-pb"></p>
-              <p class="progressbar_bar active-pb"></p>
-              <p class="progressbar_bar active-pb"></p>
-              <p class="progressbar_bar active-pb"></p>
-              <p class="progressbar_bar active-pb"></p>
-              <p class="progressbar_bar active-pb"></p>
+              <p class="progressbar_bar active"></p>
+              <p class="progressbar_bar active"></p>
+              <p class="progressbar_bar active"></p>
+              <p class="progressbar_bar active"></p>
+              <p class="progressbar_bar active"></p>
+              <p class="progressbar_bar active"></p>
+              <p class="progressbar_bar active"></p>
+              <p class="progressbar_bar active"></p>
               <p class="progressbar_bar"></p>
               <p class="progressbar_bar"></p>
               <p class="progressbar_bar"></p>
@@ -311,8 +309,24 @@
       <div class="sidebar-right">
       </div>
   	</div>
-
-  
+    <div class="welcome__window">
+    	<a href="#" class="window__close">X</a>
+      <div class="window__language">
+     	<div class="language__ru"></div>
+     	<div class="language__eng">
+     		<span class="eng__cross1"></span>
+     		<span class="eng__cross2"></span>
+     		<span class="eng__cross3"></span>
+     		<span class="eng__cross4"></span>
+     		<span class="eng__cross5"></span>
+     		<span class="eng__cross6"></span>
+     	</div>
+      </div>
+      <div class="window__inner">
+        <h2>Balloon control panel</h2>
+        <p class="white-text">Welcome! You're a new mechanic with small and simply task -- monitor and observe all balloons launched into air unless Melanie Cavill makes contact with the Engine. Once it happen, report to your superious, immediately.<br>Have fun and Good luck!</p>
+      </div>
+    </div>
 </body>
-
+      <script type="text/javascript" src="./js/script.js"></script>
 </html>
