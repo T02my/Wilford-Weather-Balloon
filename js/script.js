@@ -31,7 +31,7 @@ const screenRandomness = (element, valueInterval) => {
 	element.innerHTML = parseInt(value);
 }
 
-const randomizeAllValues = () => {
+const randomizeAllValues = () => { // fix this
 	screenRandomness(temperatureJS, 5);
 	screenRandomness(altitudeJS, 50);
 	screenRandomness(humidityJS, 2);
@@ -51,11 +51,6 @@ const addComma = (input) => {
 const removeAllComma = (input) => {
 	return input.replace(/,/, '');
 }
-
-
-const closeWindow = document.querySelector('.window__close');
-closeWindow.addEventListener("click", () => document.querySelector('.welcome__window').style.visibility = "hidden");
-
 
 const pickBalloon = () => {
     for (let i = 0; i < balloons.length; i++) {
@@ -123,6 +118,27 @@ class balloon {
 	}
 }
 
+/* === EVENT LISTENERS === */
+
+const closeWindow = document.querySelector('.window__close');
+closeWindow.addEventListener("click", () => document.querySelector('.window__center').style.visibility = "hidden");
+
+/* fix this
+const signalConfigure = () => {
+    for (let i = 0; i < document.querySelectorAll('.configure__progressbar')[i].children.length; i++) {
+    	for (let l = 0; l < document.querySelectorAll('.configure__progressbar')[i].children.length; l++)
+        document.querySelectorAll('.configure__progressbar')[i].children[l].addEventListener('mouseover', function() {
+        	for (let l = 0; l < i; l++) {
+        		document.querySelectorAll('.configure__progressbar')[i].children[l].style.backgroundColor = "#fff";
+        	}
+        });
+
+        }
+    }  
+signalConfigure();
+*/
+
+
 /* == Balloons params */
 let balloons = [
 	new balloon('Balloon 1', -110, 29000, 11, 15, 399, 1670),
@@ -135,6 +151,7 @@ let balloons = [
 
 
 /* === Start the f up all the stuff === */
+
 
 pickBalloon();
 setInterval(randomizeAllValues, 2000);
