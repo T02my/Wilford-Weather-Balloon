@@ -14,6 +14,10 @@ body {
 	font-family: sans-serif;
 }
 
+p:hover, span:hover {
+	color: #49A3CD;
+}
+
 .container {
 	display: flex;
 	text-transform: uppercase;
@@ -270,6 +274,7 @@ body {
 
 .content__line-3 {
 	display: flex;
+	flex-wrap: wrap;
 	min-height: 500px; /* temporrary*/
 	/* no solution yet to make gradient for border-top only
 	border-top: 15px solid transparent;
@@ -442,7 +447,9 @@ body {
 	width: 30%;
 }
 
-
+.line-3__status div p span:hover, .line-3__status div p:hover {
+	color: white;
+}
 
 .status__title {
 	background-color: #22365A;
@@ -674,21 +681,33 @@ body {
     transform: rotate(-45deg);
 }
 
+.ui__mouse:hover {
+	background: #1D6C85;
+	border-top: 20px #1ab6ff solid;
+}
+
 
 /* welcome window */
+
+.window__center {
+	position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
 
 .welcome__window {
 	background: linear-gradient(180deg, #0E3B4B, #11242D);
     border: 2px #1b2e3c solid;
     border-radius: 5px;
-	height: 200px;
+	height: auto;
     width: 500px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: auto;
-    right: 0;
-    bottom: 0;
+    margin: 0 auto;
+    position: relative;
     transition: 0.5s ease-in-out;
 	animation-duration: 1s;
 	animation-fill-mode: both;
@@ -850,6 +869,10 @@ body {
 	color: #cec9c2;
 }
 
+p.white-text:hover, .white-text p:hover, .white-text li a:hover {
+	color: white;
+}
+
 .grey-text {
 	color: #858B82;
 }
@@ -907,8 +930,181 @@ body {
 }
 
 /* Media Queries */	
+@media(min-width:1401px) and (max-width:1770px) {
+	.status__value {
+		font-size: 35px;
+   		padding: 15px 5px 5px 10px;
+	}
+}
+@media(max-width:1400px){
+	.line-1__title {
+		width: 70%;
+	}
+	.content__line-2 {
+		flex-wrap: wrap;
+	}
+	.line-2__menu:nth-child(1) {
+		width: 70%
+	}
+	.line-2__menu:nth-child(2) {
+		width: 25%;
+	}
+	.line-2__menu:nth-child(3) {
+		padding-top: 10px;
+		width: 100%;
+	}
 
-@media(min-width:576px){}
-@media(min-width:768px){}
-@media(min-width:992px){}
-@media(min-width:1200px){}
+	.line-3__console, .line-3__balloon, .line-3__status {
+		padding: 10px 0;
+		width: 100%;
+	}
+
+	.status__value {
+		font-size: 42px;
+	}
+
+	.content__line-4 {
+		flex-wrap: wrap;	
+	}
+
+	.line-4__balloon-device, .line-4__configure, .line-4__ui {
+		width: 100%;
+	}
+
+	.configure__progressbar {
+		margin: 5px 0;
+	}
+
+	.ui__inner {
+		padding: 5px;
+	}
+}
+
+@media(max-width:576px){
+	* {
+    	box-sizing: border-box;
+	}
+
+	.line-3__balloon *, .arrow *{
+		box-sizing: content-box;
+	}
+
+	.container {
+		display: block;
+	}
+
+	.sidebar-left {
+		width: auto;
+	}
+
+	.content {
+		padding: 5px;
+	}
+
+	.content__line-1 {
+		display: block;
+	}
+
+	.content__line-1 .white-text {
+		display: none;
+	}
+
+	.line-1__title {
+		font-size: 22px;
+		width: auto;
+	}
+
+	.content__line-2 {
+		display: block;
+	}
+
+	.line-2__signal {
+		display: block;
+		height: auto;
+	}
+
+	.line-2__signal-1 {
+		padding: 10px 5px;
+	}
+
+	.line-2__menu:nth-child(1), .line-2__menu:nth-child(2), .line-2__menu:nth-child(3) {
+		width: 100%;
+	}
+	.line-2__menu:nth-child(2) {
+		display: none;
+	}
+
+	.module__info a {
+		flex-basis: 100%;
+		padding: 2px 0;
+	}
+
+	.line-2__navbar {
+		justify-content: center;
+		padding-top: 10px;
+	}
+
+	.line-3__console, .line-3__balloon, .line-3__status {
+		padding: 10px 0;
+		width: 100%;
+	}
+
+	.line-3__console p:nth-child(1) {
+		margin: 10px 20px;
+	}
+
+	.line-3__status {
+		text-align: center;
+	}
+
+	.status__temperature p:nth-child(1) {
+		padding: 0px 20px 0px 0px;
+	}
+
+	.status__value {
+		font-size: 22px;
+		padding: 0 5px;
+	}
+
+	.status__altitude div {
+		justify-content: space-evenly;
+	}
+
+	.content__line-4 {
+		flex-wrap: wrap;
+		padding: 0;
+	}
+
+	.line-4__balloon-device, .line-4__configure, .line-4__ui {
+		width: 100%;
+	}
+
+	.balloon-device__text {
+		padding: 15px 30px 2px 8px;
+	}
+
+	.smallbox__doublebox {
+		height: 20px;
+	}
+
+	.ui__mouse {
+		height: 50px;
+	}
+
+	.window__center {
+		margin: 0 auto;
+	}
+
+	.welcome__window {
+		width: 350px;
+	}
+	.language__ru {
+		height: 24px;
+	}
+}
+
+@media(max-width:340px) {
+	.progressbar_bar {
+		width: 10px;
+	}
+}
